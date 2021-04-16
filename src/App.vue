@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header class="main-header">
-      <div class="bg-secondary py-1">
+      <div class="tools-nav bg-secondary py-1">
         <div class="container">
           <div class="d-flex justify-content-end align-items-center">
             <a href="https://line.me/ti/p/Z_V4wL67B9" class="mx-1" target="_blank">
@@ -43,14 +43,14 @@
                   ×
                 </button>
                 <ul class="list-unstyled ">
-                  <li style="border-bottom:1px solid #ced4da">
+                  <!-- <li style="border-bottom:1px solid #ced4da">
                     <router-link
                       to="/about"
                       class="h4 d-block py-3 pl-3 mb-0 text-decoration-none"
                       @click.native="menuState = false"
                       >ABOUT</router-link
                     >
-                  </li>
+                  </li> -->
                   <li style="border-bottom:1px solid #ced4da">
                     <router-link
                       to="/shop"
@@ -84,10 +84,10 @@
               <!--  -->
               <div class="menu-wrap">
                 <ul class="list-unstyled d-none d-md-flex align-items-center mb-0">
-                  <li>
+                  <!-- <li>
                     <router-link to="/about">ABOUT</router-link>
                   </li>
-                  <li class="mx-3">|</li>
+                  <li class="mx-3">|</li> -->
                   <li><router-link to="/shop">SHOP</router-link></li>
                   <li class="mx-3">|</li>
                   <li><router-link to="/location">LOCATION</router-link></li>
@@ -99,9 +99,9 @@
           <!--  -->
           <div class="col-4">
             <div class="d-flex justify-content-center align-items-center h-100">
-              <router-link to="/" class="d-inline-block">
+              <!-- <router-link to="/" class="d-inline-block"> -->
                 <img alt="Vue logo" src="./assets/logo.png" class="img-fluid" width="50px" />
-              </router-link>
+              <!-- </router-link> -->
             </div>
           </div>
           <!--  -->
@@ -131,7 +131,7 @@
     <!--  -->
     <router-view />
     <!--  -->
-    <footer class="main-footer py-5">
+    <footer class="main-footer bg-primary pt-4">
       <div class="fb-customerchat" page_id="104903445063158" minimized="false"></div>
       <div class="container">
         <div
@@ -151,12 +151,12 @@
             <p class="mb-0">客服信箱：fee8ack21@gmail.com</p>
           </div>
         </div>
-        <div>
-          <p class="mb-0 text-center">
+      </div>
+       <div style="background-color:#5b5b5b" class="py-2">
+          <p class="mb-0 text-center" style="color:#ffffff80;font-size:14px">
             Copyright © 2020 Vue Shop. All rights reserved.
           </p>
         </div>
-      </div>
     </footer>
   </div>
 </template>
@@ -182,19 +182,27 @@ export default {
 }
 
 .main-header {
+  .tools-nav a{
+    color: #ffffffcc;
+    &:hover{
+      color: #ffffff;
+    }
+  }
   padding: {
     // top: 30px;
   }
   a {
     font-weight: bold;
-    color: #2c3e50;
-    &:hover,
+  .header-icon{
+    color: #ffffffcc;
+  }
+&:hover,
     &:hover .header-icon {
-      color: darken(#2c3e50, 10%) !important;
+    color: black;
     }
     &.router-link-exact-active,
     &.router-link-exact-active:hover {
-      color: #42b983;
+      // color: #42b983;
       text-decoration: none;
       pointer-events: none;
     }
@@ -237,9 +245,8 @@ export default {
 }
 
 .main-footer {
-  background-color: #42b983;
-  p {
-    color: #ffffff;
+  p ,h4{
+    color: #ffffffcc;
   }
 }
 </style>

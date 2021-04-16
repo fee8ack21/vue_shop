@@ -6,7 +6,4 @@ module.exports = {
       https: true,
       hotOnly: false,
     },
-    publicPath: process.env.NODE_ENV === 'production'
-    ? '/vue_shop_build/'
-    : '/'
   }
