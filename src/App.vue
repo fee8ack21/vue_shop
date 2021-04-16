@@ -132,7 +132,7 @@
     <router-view />
     <!--  -->
     <footer class="main-footer py-5">
-      <div class="fb-customerchat position-fixed" page_id="104903445063158" minimized="false"></div>
+      <div class="fb-customerchat" page_id="104903445063158" minimized="false"></div>
       <div class="container">
         <div
           class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-lg-5"
